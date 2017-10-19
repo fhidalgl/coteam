@@ -1,0 +1,152 @@
+@prefix : <http://coteam-sear.rhcloud.com/vocab/coteam#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://coteam-sear.rhcloud.com/vocab/coteam> .
+
+<http://coteam-sear.rhcloud.com/vocab/coteam> rdf:type owl:Ontology ;
+                                               owl:versionIRI <http://coteam-sear.rhcloud.com/vocab/coteam/1.0.1> ;
+                                               owl:imports <http://dbpedia.org/ontology/> ;
+                                               rdfs:comment "Este vocabulario se ha elaborado para permitir el acceso a través de la Web a un corpus de textos aljamiado-moriscos, de los que podrán consultarse las voces individualizadas que los integran."@es ,
+                                                            "This vocabulary has been developed to allow Web access to a corpus of texts  aljamiado-Moors, of which will be available voices that comprise individualized."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#hasBook
+:hasBook rdf:type owl:ObjectProperty ;
+         rdfs:domain :Corpus ,
+                     :Paragraph ;
+         rdfs:range <http://dbpedia.org/ontology/WrittenWork> .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#hasConcordance
+:hasConcordance rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isConcordanceOf ;
+                rdfs:domain :Corpus ;
+                rdfs:range :Concordance .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#hasParagraph
+:hasParagraph rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isParagraphOf ;
+              rdfs:domain :Concordance ;
+              rdfs:range :Paragraph .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#hasWord
+:hasWord rdf:type owl:ObjectProperty ;
+         owl:inverseOf :isWordOf ;
+         rdfs:domain :Concordance ;
+         rdfs:range :Word .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#isBookOf
+:isBookOf rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://dbpedia.org/ontology/WrittenWork> ;
+          rdfs:range :Corpus .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#isConcordanceOf
+:isConcordanceOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Concordance ;
+                 rdfs:range :Corpus .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#isParagraphOf
+:isParagraphOf rdf:type owl:ObjectProperty ;
+               rdfs:domain :Paragraph ;
+               rdfs:range :Concordance .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#isWordOf
+:isWordOf rdf:type owl:ObjectProperty ;
+          rdfs:domain :Word ;
+          rdfs:range :Concordance .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#page
+:page rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Concordance ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Página en la que se ubica la concordancia dentro del texto."@es ,
+                   "The page in which the concordance is within the text."@en .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#paragraphText
+:paragraphText rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Paragraph ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Contiene el contenido íntegro del párrafo."@es ,
+                            "It contains the entire contents of the paragraph."@en .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#position
+:position rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Concordance ;
+          rdfs:range xsd:integer ;
+          rdfs:comment "Indica la posición, número de caracteres, en el que se encuentra la concorcancia dentro del párrafo."@es ,
+                       "Indicates the position, number of characters, in which the concordance is within the paragraph."@en .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#row
+:row rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Concordance ;
+     rdfs:range xsd:integer ;
+     rdfs:comment "Fila en la que se ubica la concordancia dentro del texto."@es ,
+                  "The row in which the concordance is within the text."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#Concordance
+:Concordance rdf:type owl:Class ;
+             rdfs:subClassOf :Corpus ;
+             rdfs:comment "A concordance is an ordered list and ranked by frequency of terms in a corpus of works."@en ,
+                          "Una concordancia es una lista ordenada y clasificada por frecuencia de los términos que aparecen en un corpus de obras (http://es.wikipedia.org/wiki/Concordancia)."@es .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#Corpus
+:Corpus rdf:type owl:Class .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph
+:Paragraph rdf:type owl:Class ;
+           rdfs:subClassOf :Corpus ;
+           rdfs:comment "Colección de párrafos del texto."@es ,
+                        "Collection of paragraphs in the text."@en .
+
+
+###  http://coteam-sear.rhcloud.com/vocab/coteam#Word
+:Word rdf:type owl:Class ;
+      rdfs:subClassOf :Corpus ;
+      rdfs:comment "Colección de palabras del texto."@es ,
+                   "Collection of words in the text."@en .
+
+
+###  http://dbpedia.org/ontology/WrittenWork
+<http://dbpedia.org/ontology/WrittenWork> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Concordance
+                :Paragraph
+                :Word
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

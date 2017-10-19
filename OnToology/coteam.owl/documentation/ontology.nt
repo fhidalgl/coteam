@@ -1,0 +1,150 @@
+<http://coteam-sear.rhcloud.com/vocab/coteam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://coteam-sear.rhcloud.com/vocab/coteam> <http://www.w3.org/2002/07/owl#versionIRI> <http://coteam-sear.rhcloud.com/vocab/coteam/1.0.1> .
+<http://coteam-sear.rhcloud.com/vocab/coteam> <http://www.w3.org/2002/07/owl#imports> <http://dbpedia.org/ontology/> .
+<http://coteam-sear.rhcloud.com/vocab/coteam> <http://www.w3.org/2000/01/rdf-schema#comment> "Este vocabulario se ha elaborado para permitir el acceso a trav\u00E9s de la Web a un corpus de textos aljamiado-moriscos, de los que podr\u00E1n consultarse las voces individualizadas que los integran."@es .
+<http://coteam-sear.rhcloud.com/vocab/coteam> <http://www.w3.org/2000/01/rdf-schema#comment> "This vocabulary has been developed to allow Web access to a corpus of texts  aljamiado-Moors, of which will be available voices that comprise individualized."@en .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#hasBook
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasBook> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Corpus> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasBook> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasBook> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/WrittenWork> .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#hasConcordance
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasConcordance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasConcordance> <http://www.w3.org/2002/07/owl#inverseOf> <http://coteam-sear.rhcloud.com/vocab/coteam#isConcordanceOf> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasConcordance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Corpus> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasConcordance> <http://www.w3.org/2000/01/rdf-schema#range> <http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#hasParagraph
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasParagraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasParagraph> <http://www.w3.org/2002/07/owl#inverseOf> <http://coteam-sear.rhcloud.com/vocab/coteam#isParagraphOf> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasParagraph> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasParagraph> <http://www.w3.org/2000/01/rdf-schema#range> <http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph> .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#hasWord
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasWord> <http://www.w3.org/2002/07/owl#inverseOf> <http://coteam-sear.rhcloud.com/vocab/coteam#isWordOf> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasWord> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#hasWord> <http://www.w3.org/2000/01/rdf-schema#range> <http://coteam-sear.rhcloud.com/vocab/coteam#Word> .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#isBookOf
+<http://coteam-sear.rhcloud.com/vocab/coteam#isBookOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#isBookOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/WrittenWork> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#isBookOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://coteam-sear.rhcloud.com/vocab/coteam#Corpus> .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#isConcordanceOf
+<http://coteam-sear.rhcloud.com/vocab/coteam#isConcordanceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#isConcordanceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#isConcordanceOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://coteam-sear.rhcloud.com/vocab/coteam#Corpus> .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#isParagraphOf
+<http://coteam-sear.rhcloud.com/vocab/coteam#isParagraphOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#isParagraphOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#isParagraphOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#isWordOf
+<http://coteam-sear.rhcloud.com/vocab/coteam#isWordOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#isWordOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Word> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#isWordOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#page
+<http://coteam-sear.rhcloud.com/vocab/coteam#page> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#page> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#page> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#page> <http://www.w3.org/2000/01/rdf-schema#comment> "P\u00E1gina en la que se ubica la concordancia dentro del texto."@es .
+<http://coteam-sear.rhcloud.com/vocab/coteam#page> <http://www.w3.org/2000/01/rdf-schema#comment> "The page in which the concordance is within the text."@en .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#paragraphText
+<http://coteam-sear.rhcloud.com/vocab/coteam#paragraphText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#paragraphText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#paragraphText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#paragraphText> <http://www.w3.org/2000/01/rdf-schema#comment> "Contiene el contenido \u00EDntegro del p\u00E1rrafo."@es .
+<http://coteam-sear.rhcloud.com/vocab/coteam#paragraphText> <http://www.w3.org/2000/01/rdf-schema#comment> "It contains the entire contents of the paragraph."@en .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#position
+<http://coteam-sear.rhcloud.com/vocab/coteam#position> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#position> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#position> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#position> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica la posici\u00F3n, n\u00FAmero de caracteres, en el que se encuentra la concorcancia dentro del p\u00E1rrafo."@es .
+<http://coteam-sear.rhcloud.com/vocab/coteam#position> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the position, number of characters, in which the concordance is within the paragraph."@en .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#row
+<http://coteam-sear.rhcloud.com/vocab/coteam#row> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#row> <http://www.w3.org/2000/01/rdf-schema#domain> <http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#row> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#row> <http://www.w3.org/2000/01/rdf-schema#comment> "Fila en la que se ubica la concordancia dentro del texto."@es .
+<http://coteam-sear.rhcloud.com/vocab/coteam#row> <http://www.w3.org/2000/01/rdf-schema#comment> "The row in which the concordance is within the text."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#Concordance
+<http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://coteam-sear.rhcloud.com/vocab/coteam#Corpus> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> <http://www.w3.org/2000/01/rdf-schema#comment> "A concordance is an ordered list and ranked by frequency of terms in a corpus of works."@en .
+<http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> <http://www.w3.org/2000/01/rdf-schema#comment> "Una concordancia es una lista ordenada y clasificada por frecuencia de los t\u00E9rminos que aparecen en un corpus de obras (http://es.wikipedia.org/wiki/Concordancia)."@es .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#Corpus
+<http://coteam-sear.rhcloud.com/vocab/coteam#Corpus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph
+<http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://coteam-sear.rhcloud.com/vocab/coteam#Corpus> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph> <http://www.w3.org/2000/01/rdf-schema#comment> "Colecci\u00F3n de p\u00E1rrafos del texto."@es .
+<http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of paragraphs in the text."@en .
+# 
+# http://coteam-sear.rhcloud.com/vocab/coteam#Word
+<http://coteam-sear.rhcloud.com/vocab/coteam#Word> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#Word> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://coteam-sear.rhcloud.com/vocab/coteam#Corpus> .
+<http://coteam-sear.rhcloud.com/vocab/coteam#Word> <http://www.w3.org/2000/01/rdf-schema#comment> "Colecci\u00F3n de palabras del texto."@es .
+<http://coteam-sear.rhcloud.com/vocab/coteam#Word> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of words in the text."@en .
+# 
+# http://dbpedia.org/ontology/WrittenWork
+<http://dbpedia.org/ontology/WrittenWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid1 <http://www.w3.org/2002/07/owl#members> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://coteam-sear.rhcloud.com/vocab/coteam#Concordance> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://coteam-sear.rhcloud.com/vocab/coteam#Word> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
