@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://coteam-sear.rhcloud.com/vocab/coteam#"
+     xml:base="http://coteam-sear.rhcloud.com/vocab/coteam"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:powder-s="http://www.w3.org/2007/05/powder-s#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms1="http://open.vocab.org/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <owl:Ontology rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam">
+        <owl:versionIRI rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam/1.0.1"/>
+        <owl:imports rdf:resource="http://dbpedia.org/ontology/"/>
+        <rdfs:comment xml:lang="es">Este vocabulario se ha elaborado para permitir el acceso a través de la Web a un corpus de textos aljamiado-moriscos, de los que podrán consultarse las voces individualizadas que los integran.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This vocabulary has been developed to allow Web access to a corpus of texts  aljamiado-Moors, of which will be available voices that comprise individualized.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#hasBook -->
+
+
+    <owl:ObjectProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#hasBook">
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Corpus"/>
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/WrittenWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#hasConcordance -->
+
+
+    <owl:ObjectProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#hasConcordance">
+        <owl:inverseOf rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#isConcordanceOf"/>
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Corpus"/>
+        <rdfs:range rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Concordance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#hasParagraph -->
+
+
+    <owl:ObjectProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#hasParagraph">
+        <owl:inverseOf rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#isParagraphOf"/>
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Concordance"/>
+        <rdfs:range rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#hasWord -->
+
+
+    <owl:ObjectProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#hasWord">
+        <owl:inverseOf rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#isWordOf"/>
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Concordance"/>
+        <rdfs:range rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Word"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#isBookOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#isBookOf">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/WrittenWork"/>
+        <rdfs:range rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Corpus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#isConcordanceOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#isConcordanceOf">
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Concordance"/>
+        <rdfs:range rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Corpus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#isParagraphOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#isParagraphOf">
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph"/>
+        <rdfs:range rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Concordance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#isWordOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#isWordOf">
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Word"/>
+        <rdfs:range rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Concordance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#page -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#page">
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Concordance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Página en la que se ubica la concordancia dentro del texto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The page in which the concordance is within the text.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#paragraphText -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#paragraphText">
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Contiene el contenido íntegro del párrafo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">It contains the entire contents of the paragraph.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#position -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#position">
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Concordance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="es">Indica la posición, número de caracteres, en el que se encuentra la concorcancia dentro del párrafo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the position, number of characters, in which the concordance is within the paragraph.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#row -->
+
+
+    <owl:DatatypeProperty rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#row">
+        <rdfs:domain rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Concordance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="es">Fila en la que se ubica la concordancia dentro del texto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The row in which the concordance is within the text.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#Concordance -->
+
+
+    <owl:Class rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#Concordance">
+        <rdfs:subClassOf rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Corpus"/>
+        <rdfs:comment xml:lang="en">A concordance is an ordered list and ranked by frequency of terms in a corpus of works.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una concordancia es una lista ordenada y clasificada por frecuencia de los términos que aparecen en un corpus de obras (http://es.wikipedia.org/wiki/Concordancia).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#Corpus -->
+
+
+    <owl:Class rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#Corpus"/>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph -->
+
+
+    <owl:Class rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph">
+        <rdfs:subClassOf rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Corpus"/>
+        <rdfs:comment xml:lang="es">Colección de párrafos del texto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Collection of paragraphs in the text.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#Word -->
+
+
+    <owl:Class rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#Word">
+        <rdfs:subClassOf rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam#Corpus"/>
+        <rdfs:comment xml:lang="es">Colección de palabras del texto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Collection of words in the text.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/WrittenWork -->
+
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/WrittenWork"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#Concordance"/>
+            <rdf:Description rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph"/>
+            <rdf:Description rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam#Word"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+
