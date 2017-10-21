@@ -7,22 +7,22 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY dbpedia-owl "http://dbpedia.org/data3/WrittenWork#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY coteam "http://coteam-sear.rhcloud.com/vocab/coteam#" >
+    <!ENTITY coteam "http://purl.org/coteam#" >
 ]>
 
 
-<rdf:RDF xmlns="http://coteam-sear.rhcloud.com/vocab/coteam#"
-     xml:base="http://coteam-sear.rhcloud.com/vocab/coteam"
+<rdf:RDF xmlns="http://purl.org/coteam#"
+     xml:base="http://purl.org/coteam"
      xmlns:dbpedia-owl="http://dbpedia.org/data3/WrittenWork#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:coteam="http://coteam-sear.rhcloud.com/vocab/coteam#">
-    <owl:Ontology rdf:about="http://coteam-sear.rhcloud.com/vocab/coteam">
+     xmlns:coteam="http://purl.org/coteam#">
+    <owl:Ontology rdf:about="http://purl.org/coteam">
         <rdfs:comment xml:lang="en">This vocabulary has been developed to allow Web access to a corpus of texts  aljamiado-Moors, of which will be available voices that comprise individualized.</rdfs:comment>
         <rdfs:comment xml:lang="es">Este vocabulario se ha elaborado para permitir el acceso a través de la Web a un corpus de textos aljamiado-moriscos, de los que podrán consultarse las voces individualizadas que los integran.</rdfs:comment>
-        <owl:versionIRI rdf:resource="http://coteam-sear.rhcloud.com/vocab/coteam/1.0.1"/>
+        <owl:versionIRI rdf:resource="http://purl.org/coteam/1.0.1"/>
         <owl:imports rdf:resource="http://dbpedia.org/ontology/"/>
     </owl:Ontology>
     
@@ -39,7 +39,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#hasBook -->
+    <!-- http://purl.org/coteam#hasBook -->
 
     <owl:ObjectProperty rdf:about="&coteam;hasBook">
         <rdfs:domain rdf:resource="&coteam;Corpus"/>
@@ -49,7 +49,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#hasConcordance -->
+    <!-- http://purl.org/coteam#hasConcordance -->
 
     <owl:ObjectProperty rdf:about="&coteam;hasConcordance">
         <rdfs:range rdf:resource="&coteam;Concordance"/>
@@ -59,7 +59,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#hasParagraph -->
+    <!-- http://purl.org/coteam#hasParagraph -->
 
     <owl:ObjectProperty rdf:about="&coteam;hasParagraph">
         <rdfs:domain rdf:resource="&coteam;Concordance"/>
@@ -69,7 +69,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#hasWord -->
+    <!-- http://purl.org/coteam#hasWord -->
 
     <owl:ObjectProperty rdf:about="&coteam;hasWord">
         <rdfs:domain rdf:resource="&coteam;Concordance"/>
@@ -79,7 +79,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#isBookOf -->
+    <!-- http://purl.org/coteam#isBookOf -->
 
     <owl:ObjectProperty rdf:about="&coteam;isBookOf">
         <rdfs:range rdf:resource="&coteam;Corpus"/>
@@ -88,7 +88,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#isConcordanceOf -->
+    <!-- http://purl.org/coteam#isConcordanceOf -->
 
     <owl:ObjectProperty rdf:about="&coteam;isConcordanceOf">
         <rdfs:domain rdf:resource="&coteam;Concordance"/>
@@ -97,7 +97,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#isParagraphOf -->
+    <!-- http://purl.org/coteam#isParagraphOf -->
 
     <owl:ObjectProperty rdf:about="&coteam;isParagraphOf">
         <rdfs:range rdf:resource="&coteam;Concordance"/>
@@ -106,7 +106,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#isWordOf -->
+    <!-- http://purl.org/coteam#isWordOf -->
 
     <owl:ObjectProperty rdf:about="&coteam;isWordOf">
         <rdfs:range rdf:resource="&coteam;Concordance"/>
@@ -126,7 +126,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#page -->
+    <!-- http://purl.org/coteam#page -->
 
     <owl:DatatypeProperty rdf:about="&coteam;page">
         <rdfs:comment xml:lang="en">The page in which the concordance is within the text.</rdfs:comment>
@@ -137,7 +137,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#paragraphText -->
+    <!-- http://purl.org/coteam#paragraphText -->
 
     <owl:DatatypeProperty rdf:about="&coteam;paragraphText">
         <rdfs:comment xml:lang="en">It contains the entire contents of the paragraph.</rdfs:comment>
@@ -148,7 +148,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#position -->
+    <!-- http://purl.org/coteam#position -->
 
     <owl:DatatypeProperty rdf:about="&coteam;position">
         <rdfs:comment xml:lang="en">Indicates the position, number of characters, in which the concordance is within the paragraph.</rdfs:comment>
@@ -159,7 +159,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#row -->
+    <!-- http://purl.org/coteam#row -->
 
     <owl:DatatypeProperty rdf:about="&coteam;row">
         <rdfs:comment xml:lang="en">The row in which the concordance is within the text.</rdfs:comment>
@@ -181,7 +181,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#Concordance -->
+    <!-- http://purl.org/coteam#Concordance -->
 
     <owl:Class rdf:about="&coteam;Concordance">
         <rdfs:subClassOf rdf:resource="&coteam;Corpus"/>
@@ -191,13 +191,13 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#Corpus -->
+    <!-- http://purl.org/coteam#Corpus -->
 
     <owl:Class rdf:about="&coteam;Corpus"/>
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#Paragraph -->
+    <!-- http://purl.org/coteam#Paragraph -->
 
     <owl:Class rdf:about="&coteam;Paragraph">
         <rdfs:subClassOf rdf:resource="&coteam;Corpus"/>
@@ -207,7 +207,7 @@
     
 
 
-    <!-- http://coteam-sear.rhcloud.com/vocab/coteam#Word -->
+    <!-- http://purl.org/coteam#Word -->
 
     <owl:Class rdf:about="&coteam;Word">
         <rdfs:subClassOf rdf:resource="&coteam;Corpus"/>
