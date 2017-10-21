@@ -2,16 +2,16 @@ digraph ar2dtool_diagram {
 rankdir=LR;
 size="1501"
 node [shape = rectangle, color="orange"]; "dbo:WrittenWork" "coteam:Word" "coteam:Paragraph" "coteam:Corpus" "coteam:Concordance" ; /*classes style*/
-	"http://coteam-sear.rhcloud.com/vocab/coteam" -> "dbo:" [ label = "owl:imports" ];
-	"http://coteam-sear.rhcloud.com/vocab/coteam" -> "http://coteam-sear.rhcloud.com/vocab/coteam/1.0.1" [ label = "owl:versionIRI" ];
-	"NULL" -> "575661a:15f3587019a:-7ff9" [ label = "rdf:rest" ];
-	"NULL" -> "coteam:Paragraph" [ label = "rdf:first" ];
-	"NULL" -> "575661a:15f3587019a:-7ffa" [ label = "rdf:rest" ];
-	"NULL" -> "coteam:Concordance" [ label = "rdf:first" ];
-	"NULL" -> "575661a:15f3587019a:-7ffb" [ label = "owl:members" ];
+	"http://purl.org/coteam" -> "dbo:" [ label = "owl:imports" ];
+	"http://purl.org/coteam" -> "http://purl.org/coteam/1.0.1" [ label = "owl:versionIRI" ];
+	"http://dbpedia.org/ontology/data/definitions.ttl" -> "dbo:" [ label = "ns39:describes" ];
+	"NULL" -> "-37d060ac:15f402b17af:-7ffb" [ label = "owl:members" ];
 	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
 	"NULL" -> "coteam:Word" [ label = "rdf:first" ];
-	"http://dbpedia.org/ontology/data/definitions.ttl" -> "dbo:" [ label = "ns39:describes" ];
+	"NULL" -> "-37d060ac:15f402b17af:-7ff9" [ label = "rdf:rest" ];
+	"NULL" -> "coteam:Paragraph" [ label = "rdf:first" ];
+	"NULL" -> "-37d060ac:15f402b17af:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "coteam:Concordance" [ label = "rdf:first" ];
 	"dbo:" -> "dbo:cargoGas" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:aircraftFighter" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:winsAtChampionships" [ label = "ns39:defines" ];
@@ -4026,17 +4026,17 @@ node [shape = rectangle, color="orange"]; "dbo:WrittenWork" "coteam:Word" "cotea
 	"dbo:" -> "dbo:managementCountry" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:localization" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:dockedTime" [ label = "ns39:defines" ];
-	"coteam:Corpus" -> "dbo:WrittenWork" [ label = "coteam:hasBook" ];
-	"coteam:Word" -> "coteam:Concordance" [ label = "coteam:isWordOf" ];
 	"coteam:Corpus" -> "coteam:Concordance" [ label = "coteam:hasConcordance" ];
-	"coteam:Paragraph" -> "coteam:Concordance" [ label = "coteam:isParagraphOf" ];
-	"coteam:Concordance" -> "xsd:integer" [ label = "coteam:position" ];
+	"coteam:Concordance" -> "coteam:Word" [ label = "coteam:hasWord" ];
 	"coteam:Concordance" -> "coteam:Paragraph" [ label = "coteam:hasParagraph" ];
 	"coteam:Concordance" -> "xsd:string" [ label = "coteam:page" ];
-	"coteam:Concordance" -> "xsd:integer" [ label = "coteam:row" ];
-	"coteam:Paragraph" -> "xsd:string" [ label = "coteam:paragraphText" ];
 	"dbo:WrittenWork" -> "coteam:Corpus" [ label = "coteam:isBookOf" ];
-	"coteam:Concordance" -> "coteam:Word" [ label = "coteam:hasWord" ];
+	"coteam:Concordance" -> "xsd:integer" [ label = "coteam:row" ];
 	"coteam:Concordance" -> "coteam:Corpus" [ label = "coteam:isConcordanceOf" ];
+	"coteam:Paragraph" -> "coteam:Concordance" [ label = "coteam:isParagraphOf" ];
+	"coteam:Concordance" -> "xsd:integer" [ label = "coteam:position" ];
+	"coteam:Paragraph" -> "xsd:string" [ label = "coteam:paragraphText" ];
+	"coteam:Word" -> "coteam:Concordance" [ label = "coteam:isWordOf" ];
+	"coteam:Corpus" -> "dbo:WrittenWork" [ label = "coteam:hasBook" ];
 
 }

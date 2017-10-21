@@ -2,8 +2,8 @@ digraph ar2dtool_diagram {
 rankdir=LR;
 size="1000"
 node [shape = rectangle, color="black"]; "coteam:Word" "coteam:Paragraph" "coteam:Corpus" "coteam:Concordance" ; /*classes style*/
+	"coteam:Paragraph" -> "coteam:Corpus" [ label = "rdfs:subClassOf" ];
 	"coteam:Word" -> "coteam:Corpus" [ label = "rdfs:subClassOf" ];
 	"coteam:Concordance" -> "coteam:Corpus" [ label = "rdfs:subClassOf" ];
-	"coteam:Paragraph" -> "coteam:Corpus" [ label = "rdfs:subClassOf" ];
 
 }
