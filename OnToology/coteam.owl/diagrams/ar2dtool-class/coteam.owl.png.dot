@@ -1,17 +1,18 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "dbo:WrittenWork" "coteam:Word" "coteam:Paragraph" "coteam:Corpus" "coteam:Concordance" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "coteam:Word" "coteam:Paragraph" "coteam:Corpus" "coteam:Concordance" "dbo:WrittenWork" ; /*classes style*/
+	"http://purl.org/coteam" -> "http://purl.org/coteam/1.1" [ label = "owl:versionIRI" ];
+	"http://purl.org/coteam" -> "http://creativecommons.org/licenses/by/3.0/" [ label = "cc:license" ];
 	"http://purl.org/coteam" -> "dbo:" [ label = "owl:imports" ];
-	"http://purl.org/coteam" -> "http://purl.org/coteam/1.0.1" [ label = "owl:versionIRI" ];
 	"http://dbpedia.org/ontology/data/definitions.ttl" -> "dbo:" [ label = "ns39:describes" ];
-	"NULL" -> "-37d060ac:15f402b17af:-7ffb" [ label = "owl:members" ];
 	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
 	"NULL" -> "coteam:Word" [ label = "rdf:first" ];
-	"NULL" -> "-37d060ac:15f402b17af:-7ff9" [ label = "rdf:rest" ];
+	"NULL" -> "23b39faa:15f48d690e5:-7ff9" [ label = "rdf:rest" ];
 	"NULL" -> "coteam:Paragraph" [ label = "rdf:first" ];
-	"NULL" -> "-37d060ac:15f402b17af:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "23b39faa:15f48d690e5:-7ffa" [ label = "rdf:rest" ];
 	"NULL" -> "coteam:Concordance" [ label = "rdf:first" ];
+	"NULL" -> "23b39faa:15f48d690e5:-7ffb" [ label = "owl:members" ];
 	"dbo:" -> "dbo:cargoGas" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:aircraftFighter" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:winsAtChampionships" [ label = "ns39:defines" ];
@@ -210,7 +211,7 @@ node [shape = rectangle, color="orange"]; "dbo:WrittenWork" "coteam:Word" "cotea
 	"dbo:" -> "dbo:distanceToCharingCross" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:mount" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:Biomolecule" [ label = "ns39:defines" ];
-	"dbo:" -> "http://mappings.dbpedia.org" [ label = "dct:source" ];
+	"dbo:" -> "http://mappings.dbpedia.org" [ label = "dc:source" ];
 	"dbo:" -> "dbo:Tax" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:isoCodeRegion" [ label = "ns39:defines" ];
 	"dbo:" -> "ns25:length" [ label = "ns39:defines" ];
@@ -1637,7 +1638,7 @@ node [shape = rectangle, color="orange"]; "dbo:WrittenWork" "coteam:Word" "cotea
 	"dbo:" -> "dbo:gridReference" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:forces" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:prefecture" [ label = "ns39:defines" ];
-	"dbo:" -> "http://www.gnu.org/copyleft/fdl.html" [ label = "ns37:license" ];
+	"dbo:" -> "http://www.gnu.org/copyleft/fdl.html" [ label = "cc:license" ];
 	"dbo:" -> "dbo:leadYear" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:LacrosseLeague" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:floorArea" [ label = "ns39:defines" ];
@@ -3359,7 +3360,7 @@ node [shape = rectangle, color="orange"]; "dbo:WrittenWork" "coteam:Word" "cotea
 	"dbo:" -> "dbo:institution" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:statusManager" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:humanDevelopmentIndexRank" [ label = "ns39:defines" ];
-	"dbo:" -> "http://creativecommons.org/licenses/by-sa/3.0/" [ label = "ns37:license" ];
+	"dbo:" -> "http://creativecommons.org/licenses/by-sa/3.0/" [ label = "cc:license" ];
 	"dbo:" -> "dbo:titleSingle" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:restingPlace" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:NarutoCharacter" [ label = "ns39:defines" ];

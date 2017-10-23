@@ -1,8 +1,14 @@
 {
   "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
     "paragraphText" : {
       "@id" : "http://purl.org/coteam#paragraphText",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
     },
     "hasBook" : {
       "@id" : "http://purl.org/coteam#hasBook",
@@ -11,6 +17,9 @@
     "hasConcordance" : {
       "@id" : "http://purl.org/coteam#hasConcordance",
       "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
     },
     "isWordOf" : {
       "@id" : "http://purl.org/coteam#isWordOf",
@@ -27,6 +36,9 @@
     "isConcordanceOf" : {
       "@id" : "http://purl.org/coteam#isConcordanceOf",
       "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "Corpus" : {
       "@id" : "http://purl.org/coteam#Corpus"
@@ -46,9 +58,21 @@
       "@id" : "http://purl.org/coteam#isParagraphOf",
       "@type" : "@id"
     },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
     "row" : {
       "@id" : "http://purl.org/coteam#row",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Vocabulary" : {
+      "@id" : "http://purl.org/vocommons/voaf#Vocabulary"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
     },
     "Word" : {
       "@id" : "http://purl.org/coteam#Word"
@@ -65,6 +89,12 @@
     "page" : {
       "@id" : "http://purl.org/coteam#page",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
     }
   }
 }
