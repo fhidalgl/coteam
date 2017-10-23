@@ -1,0 +1,573 @@
+<h2  id="crossreference" class="list">Cross reference for [Ontology Name] classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by [Ontology Name].
+<div id="classes">
+   <h3 id="classes" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#Corpus" title="http://purl.org/coteam#Corpus">Corpus</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#Paragraph" title="http://purl.org/coteam#Paragraph">Paragraph</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#Word" title="http://purl.org/coteam#Word">Word</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/coteam#Concordance">
+      <h3>Concordance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#Concordance</p>
+      <div class="comment">
+         <span class="markdown">A concordance is an ordered list and ranked by frequency of terms in a corpus of works.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#Corpus" title="http://purl.org/coteam#Corpus">Corpus</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#hasParagraph" title="http://purl.org/coteam#hasParagraph">hasParagraph</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/coteam#hasWord" title="http://purl.org/coteam#hasWord">hasWord</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/coteam#isConcordanceOf" title="http://purl.org/coteam#isConcordanceOf">isConcorcandeOf</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/coteam#page" title="http://purl.org/coteam#page">page</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/coteam#position" title="http://purl.org/coteam#position">position</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/coteam#row" title="http://purl.org/coteam#row">row</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#hasConcordance" title="http://purl.org/coteam#hasConcordance">hasConcordance</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/coteam#isParagraphOf" title="http://purl.org/coteam#isParagraphOf">isParagraphOf</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/coteam#isWordOf" title="http://purl.org/coteam#isWordOf">isWordOf</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#Paragraph" title="http://purl.org/coteam#Paragraph">Paragraph</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/coteam#Word" title="http://purl.org/coteam#Word">Word</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#Corpus">
+      <h3>Corpus<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#Corpus</p>
+      <div class="comment">
+         <span class="markdown">In this context a corpus in a collection of aljamiado-moriscos manuscripts</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/coteam#Paragraph" title="http://purl.org/coteam#Paragraph">Paragraph</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/coteam#Word" title="http://purl.org/coteam#Word">Word</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#hasBook" title="http://purl.org/coteam#hasBook">hasBook</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/coteam#hasConcordance" title="http://purl.org/coteam#hasConcordance">hasConcordance</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#isBookOf" title="http://purl.org/coteam#isBookOf">isBookOf</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/coteam#isConcordanceOf" title="http://purl.org/coteam#isConcordanceOf">isConcorcandeOf</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#Paragraph">
+      <h3>Paragraph<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#Paragraph</p>
+      <div class="comment">
+         <span class="markdown">Collection of paragraphs in the text.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#Corpus" title="http://purl.org/coteam#Corpus">Corpus</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#isParagraphOf" title="http://purl.org/coteam#isParagraphOf">isParagraphOf</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/coteam#paragraphText" title="http://purl.org/coteam#paragraphText">paragraphText</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#hasParagraph" title="http://purl.org/coteam#hasParagraph">hasParagraph</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/coteam#Word" title="http://purl.org/coteam#Word">Word</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#Word">
+      <h3>Word<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#Word</p>
+      <div class="comment">
+         <span class="markdown">Collection of words in the text.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#Corpus" title="http://purl.org/coteam#Corpus">Corpus</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#isWordOf" title="http://purl.org/coteam#isWordOf">isWordOf</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#hasWord" title="http://purl.org/coteam#hasWord">hasWord</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/coteam#Paragraph" title="http://purl.org/coteam#Paragraph">Paragraph</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/coteam#hasBook" title="http://purl.org/coteam#hasBook">hasBook</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#hasConcordance" title="http://purl.org/coteam#hasConcordance">hasConcordance</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#hasParagraph" title="http://purl.org/coteam#hasParagraph">hasParagraph</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#hasWord" title="http://purl.org/coteam#hasWord">hasWord</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#isBookOf" title="http://purl.org/coteam#isBookOf">isBookOf</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#isConcordanceOf" title="http://purl.org/coteam#isConcordanceOf">isConcorcandeOf</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#isParagraphOf" title="http://purl.org/coteam#isParagraphOf">isParagraphOf</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#isWordOf" title="http://purl.org/coteam#isWordOf">isWordOf</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/coteam#hasBook">
+      <h3>hasBook<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#hasBook</p>
+      <div class="comment">
+         <span class="markdown">Relate the corpus with each of his manuscripts</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Corpus" title="http://purl.org/coteam#Corpus">Corpus</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://dbpedia.org/ontology/WrittenWork">written work</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#isBookOf" title="http://purl.org/coteam#isBookOf">isBookOf</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#hasConcordance">
+      <h3>hasConcordance<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#hasConcordance</p>
+      <div class="comment">
+         <span class="markdown">Relate the corpus with each of the concordances of the manuscripts</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Corpus" title="http://purl.org/coteam#Corpus">Corpus</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#isConcordanceOf" title="http://purl.org/coteam#isConcordanceOf">isConcorcandeOf</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#hasParagraph">
+      <h3>hasParagraph<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#hasParagraph</p>
+      <div class="comment">
+         <span class="markdown">Match each concordance with the paragraph to which it belongs</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Paragraph" title="http://purl.org/coteam#Paragraph">Paragraph</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#isParagraphOf" title="http://purl.org/coteam#isParagraphOf">isParagraphOf</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#hasWord">
+      <h3>hasWord<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#hasWord</p>
+      <div class="comment">
+         <span class="markdown">Match each match with the word to which it refers</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Word" title="http://purl.org/coteam#Word">Word</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#isWordOf" title="http://purl.org/coteam#isWordOf">isWordOf</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#isBookOf">
+      <h3>isBookOf<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#isBookOf</p>
+      <div class="comment">
+         <span class="markdown">List each manuscript with the corpus to which it belongs</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://dbpedia.org/ontology/WrittenWork">written work</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Corpus" title="http://purl.org/coteam#Corpus">Corpus</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#hasBook" title="http://purl.org/coteam#hasBook">hasBook</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#isConcordanceOf">
+      <h3>isConcorcandeOf<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#isConcordanceOf</p>
+      <div class="comment">
+         <span class="markdown">Relates each match to the corpus to which it belongs</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Corpus" title="http://purl.org/coteam#Corpus">Corpus</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#hasConcordance" title="http://purl.org/coteam#hasConcordance">hasConcordance</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#isParagraphOf">
+      <h3>isParagraphOf<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#isParagraphOf</p>
+      <div class="comment">
+         <span class="markdown">Match each paragraph with each of its matches</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Paragraph" title="http://purl.org/coteam#Paragraph">Paragraph</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#hasParagraph" title="http://purl.org/coteam#hasParagraph">hasParagraph</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#isWordOf">
+      <h3>isWordOf<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#isWordOf</p>
+      <div class="comment">
+         <span class="markdown">Relaciona cada palabra con cada una de sus concordancias</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Word" title="http://purl.org/coteam#Word">Word</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#hasWord" title="http://purl.org/coteam#hasWord">hasWord</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/coteam#page" title="http://purl.org/coteam#page">page</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#paragraphText" title="http://purl.org/coteam#paragraphText">paragraphText</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#position" title="http://purl.org/coteam#position">position</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/coteam#row" title="http://purl.org/coteam#row">row</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/coteam#page">
+      <h3>page<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#page</p>
+      <div class="comment">
+         <span class="markdown">The page in which the concordance is within the text.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#paragraphText">
+      <h3>paragraphText<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#paragraphText</p>
+      <div class="comment">
+         <span class="markdown">It contains the entire contents of the paragraph.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Paragraph" title="http://purl.org/coteam#Paragraph">Paragraph</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#position">
+      <h3>position<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#position</p>
+      <div class="comment">
+         <span class="markdown">Indicates the position, number of characters, in which the concordance is within the paragraph.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/coteam#row">
+      <h3>row<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam#row</p>
+      <div class="comment">
+         <span class="markdown">The row in which the concordance is within the text.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/coteam#Concordance" title="http://purl.org/coteam#Concordance">Concordance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/coteam" title="http://purl.org/coteam">
+            <span>coteam</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/coteam">
+      <h3>coteam<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/coteam</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/vocommons/voaf#Vocabulary">vocabulary</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

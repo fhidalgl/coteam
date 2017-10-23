@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY coteam "http://purl.org/coteam#" >
+    <!ENTITY dc "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY voaf "http://purl.org/vocommons/voaf#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY dbpedia-owl "http://dbpedia.org/data3/WrittenWork#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/coteam#"
+     xml:base="http://purl.org/coteam"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dbpedia-owl="http://dbpedia.org/data3/WrittenWork#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:coteam="http://purl.org/coteam#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://purl.org/coteam">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">1.1</owl:versionInfo>
+        <dc:issued rdf:datatype="&xsd;date">2016-06-30</dc:issued>
+        <dc:modified rdf:datatype="&xsd;date">2017-10-21</dc:modified>
+        <vann:preferredNamespaceUri>http://purl.org/coteam#</vann:preferredNamespaceUri>
+        <vann:preferredNamespacePrefix>coteam</vann:preferredNamespacePrefix>
+        <dc:title xml:lang="en">Corpus de textos Aljamiado-Moriscos</dc:title>
+        <rdfs:comment xml:lang="en">This vocabulary has been developed to allow Web access to a corpus of texts  aljamiado-Moors, of which will be available voices that comprise individualized.</rdfs:comment>
+        <dc:description xml:lang="en">This vocabulary has been developed to allow Web access to a corpus of texts  aljamiado-Moors, of which will be available voices that comprise individualized.</dc:description>
+        <rdfs:comment xml:lang="es">Este vocabulario se ha elaborado para permitir el acceso a través de la Web a un corpus de textos aljamiado-moriscos, de los que podrán consultarse las voces individualizadas que los integran.</rdfs:comment>
+        <dc:description xml:lang="es">Este vocabulario se ha elaborado para permitir el acceso a través de la Web a un corpus de textos aljamiado-moriscos, de los que podrán consultarse las voces individualizadas que los integran.</dc:description>
+        <rdfs:comment xml:lang="es">Se ha revisado el vocabulario para incrementar el nivel de comentarios y mejorar la evaluación.</rdfs:comment>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <owl:imports rdf:resource="http://dbpedia.org/ontology/"/>
+        <owl:versionIRI rdf:resource="http://purl.org/coteam/1.1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/coteam#hasBook -->
+
+    <owl:ObjectProperty rdf:about="&coteam;hasBook">
+        <rdfs:label>hasBook</rdfs:label>
+        <rdfs:comment xml:lang="en">Relate the corpus with each of his manuscripts</rdfs:comment>
+        <rdfs:comment xml:lang="es">Relaciona el corpus con cada uno de sus manuscritos</rdfs:comment>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/WrittenWork"/>
+        <rdfs:domain rdf:resource="&coteam;Corpus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/coteam#hasConcordance -->
+
+    <owl:ObjectProperty rdf:about="&coteam;hasConcordance">
+        <rdfs:label>hasConcordance</rdfs:label>
+        <rdfs:comment xml:lang="en">Relate the corpus with each of the concordances of the manuscripts</rdfs:comment>
+        <rdfs:comment xml:lang="es">Relaciona el corpus con cada uno de las concordancias de los manuscritos</rdfs:comment>
+        <rdfs:range rdf:resource="&coteam;Concordance"/>
+        <rdfs:domain rdf:resource="&coteam;Corpus"/>
+        <owl:inverseOf rdf:resource="&coteam;isConcordanceOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/coteam#hasParagraph -->
+
+    <owl:ObjectProperty rdf:about="&coteam;hasParagraph">
+        <rdfs:label>hasParagraph</rdfs:label>
+        <rdfs:comment xml:lang="en">Match each concordance with the paragraph to which it belongs</rdfs:comment>
+        <rdfs:comment xml:lang="es">Relaciona cada una de las concordancias con el párrafo al que pertenece</rdfs:comment>
+        <rdfs:domain rdf:resource="&coteam;Concordance"/>
+        <rdfs:range rdf:resource="&coteam;Paragraph"/>
+        <owl:inverseOf rdf:resource="&coteam;isParagraphOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/coteam#hasWord -->
+
+    <owl:ObjectProperty rdf:about="&coteam;hasWord">
+        <rdfs:label>hasWord</rdfs:label>
+        <rdfs:comment xml:lang="en">Match each match with the word to which it refers</rdfs:comment>
+        <rdfs:comment xml:lang="es">Relaciona cada concordancia con la palabra a la que hace referencia</rdfs:comment>
+        <rdfs:domain rdf:resource="&coteam;Concordance"/>
+        <rdfs:range rdf:resource="&coteam;Word"/>
+        <owl:inverseOf rdf:resource="&coteam;isWordOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/coteam#isBookOf -->
+
+    <owl:ObjectProperty rdf:about="&coteam;isBookOf">
+        <rdfs:label>isBookOf</rdfs:label>
+        <rdfs:comment xml:lang="en">List each manuscript with the corpus to which it belongs</rdfs:comment>
+        <rdfs:comment xml:lang="es">Relaciona cada manuscrito con el corpus al que pertenene</rdfs:comment>
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/WrittenWork"/>
+        <rdfs:range rdf:resource="&coteam;Corpus"/>
+        <owl:inverseOf rdf:resource="&coteam;hasBook"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/coteam#isConcordanceOf -->
+
+    <owl:ObjectProperty rdf:about="&coteam;isConcordanceOf">
+        <rdfs:label>isConcorcandeOf</rdfs:label>
+        <rdfs:comment xml:lang="en">Relates each match to the corpus to which it belongs</rdfs:comment>
+        <rdfs:comment xml:lang="es">Relaciona cada concordancia con el corpus al que pertenece</rdfs:comment>
+        <rdfs:domain rdf:resource="&coteam;Concordance"/>
+        <rdfs:range rdf:resource="&coteam;Corpus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/coteam#isParagraphOf -->
+
+    <owl:ObjectProperty rdf:about="&coteam;isParagraphOf">
+        <rdfs:label>isParagraphOf</rdfs:label>
+        <rdfs:comment xml:lang="en">Match each paragraph with each of its matches</rdfs:comment>
+        <rdfs:comment xml:lang="es">Relaciona cada párrafo con cada una de sus concordancias</rdfs:comment>
+        <rdfs:range rdf:resource="&coteam;Concordance"/>
+        <rdfs:domain rdf:resource="&coteam;Paragraph"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/coteam#isWordOf -->
+
+    <owl:ObjectProperty rdf:about="&coteam;isWordOf">
+        <rdfs:label>isWordOf</rdfs:label>
+        <rdfs:comment xml:lang="en">Relaciona cada palabra con cada una de sus concordancias</rdfs:comment>
+        <rdfs:comment xml:lang="es">Relaciona cada palabra con cada una de sus concordancias</rdfs:comment>
+        <rdfs:range rdf:resource="&coteam;Concordance"/>
+        <rdfs:domain rdf:resource="&coteam;Word"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/coteam#page -->
+
+    <owl:DatatypeProperty rdf:about="&coteam;page">
+        <rdfs:label>page</rdfs:label>
+        <rdfs:comment xml:lang="en">The page in which the concordance is within the text.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Página en la que se ubica la concordancia dentro del texto.</rdfs:comment>
+        <rdfs:domain rdf:resource="&coteam;Concordance"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/coteam#paragraphText -->
+
+    <owl:DatatypeProperty rdf:about="&coteam;paragraphText">
+        <rdfs:label>paragraphText</rdfs:label>
+        <rdfs:comment xml:lang="en">It contains the entire contents of the paragraph.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Contiene el contenido íntegro del párrafo.</rdfs:comment>
+        <rdfs:domain rdf:resource="&coteam;Paragraph"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/coteam#position -->
+
+    <owl:DatatypeProperty rdf:about="&coteam;position">
+        <rdfs:label>position</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates the position, number of characters, in which the concordance is within the paragraph.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Indica la posición, número de caracteres, en el que se encuentra la concorcancia dentro del párrafo.</rdfs:comment>
+        <rdfs:domain rdf:resource="&coteam;Concordance"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/coteam#row -->
+
+    <owl:DatatypeProperty rdf:about="&coteam;row">
+        <rdfs:label>row</rdfs:label>
+        <rdfs:comment xml:lang="en">The row in which the concordance is within the text.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Fila en la que se ubica la concordancia dentro del texto.</rdfs:comment>
+        <rdfs:domain rdf:resource="&coteam;Concordance"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/WrittenWork -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/WrittenWork"/>
+    
+
+
+    <!-- http://purl.org/coteam#Concordance -->
+
+    <owl:Class rdf:about="&coteam;Concordance">
+        <rdfs:label>Concordance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&coteam;Corpus"/>
+        <rdfs:comment xml:lang="en">A concordance is an ordered list and ranked by frequency of terms in a corpus of works.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una concordancia es una lista ordenada y clasificada por frecuencia de los términos que aparecen en un corpus de obras (http://es.wikipedia.org/wiki/Concordancia).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/coteam#Corpus -->
+
+    <owl:Class rdf:about="&coteam;Corpus">
+        <rdfs:label>Corpus</rdfs:label>
+        <rdfs:comment xml:lang="en">In this context a corpus in a collection of aljamiado-moriscos manuscripts</rdfs:comment>
+        <rdfs:comment xml:lang="es">En este contexto un corpus en una colección de manuscritos aljamiado-moriscos</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/coteam#Paragraph -->
+
+    <owl:Class rdf:about="&coteam;Paragraph">
+        <rdfs:label>Paragraph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&coteam;Corpus"/>
+        <rdfs:comment xml:lang="en">Collection of paragraphs in the text.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Colección de párrafos del texto.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/coteam#Word -->
+
+    <owl:Class rdf:about="&coteam;Word">
+        <rdfs:label>Word</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&coteam;Corpus"/>
+        <rdfs:comment xml:lang="en">Collection of words in the text.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Colección de palabras del texto.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
+
+    <owl:Class rdf:about="&voaf;Vocabulary"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/coteam -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/coteam">
+        <rdf:type rdf:resource="&voaf;Vocabulary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&coteam;Concordance"/>
+            <rdf:Description rdf:about="&coteam;Paragraph"/>
+            <rdf:Description rdf:about="&coteam;Word"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
