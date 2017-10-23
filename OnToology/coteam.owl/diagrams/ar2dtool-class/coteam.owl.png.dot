@@ -6,13 +6,13 @@ node [shape = rectangle, color="orange"]; "coteam:Word" "coteam:Paragraph" "cote
 	"http://purl.org/coteam" -> "http://creativecommons.org/licenses/by/3.0/" [ label = "cc:license" ];
 	"http://purl.org/coteam" -> "dbo:" [ label = "owl:imports" ];
 	"http://dbpedia.org/ontology/data/definitions.ttl" -> "dbo:" [ label = "ns39:describes" ];
+	"NULL" -> "-19973fcd:15f4900e6c1:-7ffb" [ label = "owl:members" ];
 	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
 	"NULL" -> "coteam:Word" [ label = "rdf:first" ];
-	"NULL" -> "23b39faa:15f48d690e5:-7ff9" [ label = "rdf:rest" ];
+	"NULL" -> "-19973fcd:15f4900e6c1:-7ff9" [ label = "rdf:rest" ];
 	"NULL" -> "coteam:Paragraph" [ label = "rdf:first" ];
-	"NULL" -> "23b39faa:15f48d690e5:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "-19973fcd:15f4900e6c1:-7ffa" [ label = "rdf:rest" ];
 	"NULL" -> "coteam:Concordance" [ label = "rdf:first" ];
-	"NULL" -> "23b39faa:15f48d690e5:-7ffb" [ label = "owl:members" ];
 	"dbo:" -> "dbo:cargoGas" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:aircraftFighter" [ label = "ns39:defines" ];
 	"dbo:" -> "dbo:winsAtChampionships" [ label = "ns39:defines" ];
